@@ -1,14 +1,30 @@
 import React from 'react'
 
 export default function MainScreenTags() {
+    const welcome = {
+        fontSize: "85px",
+        color : "#d9d4da"
+    }
+    const brand = {
+        fontSize: "120px",
+        color:"#86f986"
+    }
+    const ss = {
+        fontSize: "30px",
+        color:"#86f986"
+        
+    }
+   
+
+
+
     return (
-        <div className="tags">
-            <div>
-                <a href="https://uvce.ac.in/" ><h1 className="clgName" >UVCE</h1></a>
-            </div>
-            <div style={{width:'50%'}}>
-                <a href="https://en.wikipedia.org/wiki/University_Visvesvaraya_College_of_Engineering" ><h4 className="clgFam">Since 1917</h4></a>
-            </div>
+        <div className="tags" style={{width: 768 ,height:500}}>
+
+            <b style={ welcome }>WelCome to</b>
+            <strong style={ brand } onClick={ (e) => window.open("https://uvce.ac.in") }>UVCE</strong>
+            <b style={ ss }>Study-Support</b>
+
         </div>
     )
 }

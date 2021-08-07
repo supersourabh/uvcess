@@ -63,8 +63,7 @@ flex-wrap: wrap;
 flex-direction: row;
 padding-top:20px ;
 width: 100%;
-height: 100vh;
-background: linear-gradient(90deg ,  #854e74 ,#f2c8ce );
+background: linear-gradient(45deg ,  #854e74 ,#f2c8ce );
 
 }
 
@@ -73,7 +72,7 @@ background: linear-gradient(90deg ,  #854e74 ,#f2c8ce );
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
-  background: linear-gradient(90deg ,  #854e74 ,#f2c8ce );
+  background: linear-gradient(90deg , #854e74 ,#f2c8ce );
 }
 
 .lottiePic div{
@@ -107,6 +106,7 @@ background: linear-gradient(90deg ,  #854e74 ,#f2c8ce );
   justify-content: center;
   align-items: center;
   width: 100vh;
+  background: transparent;
 
 }
 
@@ -299,13 +299,18 @@ input[type="file"]{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: transparent;
 }
 
-.tags div a{
+.tags a{
   text-decoration: unset
 }
+
+.tags strong:hover{
+  text-decoration: unset;
+  cursor: pointer;
+}
+
 
 @import url("https://fonts.googleapis.com/css?family=Audiowide");
 

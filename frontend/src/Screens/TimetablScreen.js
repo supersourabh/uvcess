@@ -13,7 +13,7 @@ export default function TimetablScreen() {
     const [file, setFile] = useState();
 
     const dispatch = useDispatch()
-
+    
     const syllabusUpload = useSelector(state => state.syllabusUpload)
     const{loading ,error,success}=syllabusUpload;
 

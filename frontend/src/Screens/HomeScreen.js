@@ -28,6 +28,9 @@ export default function HomeScreen(props) {
         dispatch(loginAction(name, rollNo))
     }
 
+    
+    var isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone/i.test(navigator.userAgent)) ? true : false;
+
 
     const defaultOptions = {
         loop: true,
@@ -50,7 +53,7 @@ export default function HomeScreen(props) {
     return (
         <>
 
-            <div className="main-div">
+            <div className="main-div" style={{height : isMobile?1300:670}}>
 
                 {
                     studentInfo ? <MainScreenTags /> :
@@ -92,20 +95,11 @@ export default function HomeScreen(props) {
                         </div>
                 }
                 <div className="main-picture" style={ { zIndex: 10000 } }>
-                    <Lottie options={ defaultOptions } height={ 500 } />
+                    <Lottie options={ defaultOptions } height={500}  />
                 </div>
             </div>
 
-            {
-                studentInfo &&
-                <div className="lottiePic">
-                    <Lottie options={ defaultOptions2 } height={ 500 } width={ 500 } />
-                    <div className="lottieDiv2">
-                        <text >If you do not enjoy a moment, you lose it forever. If you enjoy it, it is yours forever.</text>
-                    </div>
-
-                </div>
-            }
+           
 
         </>
     )

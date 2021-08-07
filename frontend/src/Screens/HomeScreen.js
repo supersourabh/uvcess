@@ -5,8 +5,8 @@ import Alerts from '../HomeComponents/Alerts';
 import Loading from '../HomeComponents/Loading';
 import MainScreenTags from '../HomeComponents/MainScreenTags';
 import Lottie from 'react-lottie';
-import lotti from "../HomeComponents/59446-black-guy-animation.json"
-import lotti2 from "../HomeComponents/63228-man-watching-a-movie.json"
+import lottie1 from "../HomeComponents/54487-learning.json"
+import lottie2 from "../HomeComponents/50124-user-profile.json"
 
 export default function HomeScreen(props) {
 
@@ -28,14 +28,14 @@ export default function HomeScreen(props) {
         dispatch(loginAction(name, rollNo))
     }
 
-    
+
     var isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone/i.test(navigator.userAgent)) ? true : false;
 
 
     const defaultOptions = {
         loop: true,
         autoplay: true,
-        animationData: lotti,
+        animationData: lottie1 ,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
         }
@@ -43,17 +43,18 @@ export default function HomeScreen(props) {
     const defaultOptions2 = {
         loop: true,
         autoplay: true,
-        animationData: lotti2,
+        animationData: lottie2,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
         }
     }
 
 
+
     return (
         <>
 
-            <div className="main-div" style={{height : isMobile?1300:670}}>
+            <div className="main-div">
 
                 {
                     studentInfo ? <MainScreenTags /> :
@@ -95,11 +96,18 @@ export default function HomeScreen(props) {
                         </div>
                 }
                 <div className="main-picture" style={ { zIndex: 10000 } }>
-                    <Lottie options={ defaultOptions } height={500}  />
-                </div>
+                    {
+                        !studentInfo ?
+                            <Lottie options={ defaultOptions2 } width={ 500 } height={500} /> :
+                            <Lottie options={ defaultOptions } height={ 580 } />
+                    }
+            </div>
+            </div>
+            <div className="main-div" style={ { width: "100%", height: 180 } }>
+
             </div>
 
-           
+
 
         </>
     )

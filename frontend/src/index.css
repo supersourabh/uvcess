@@ -63,7 +63,7 @@ flex-wrap: wrap;
 flex-direction: row;
 padding-top:20px ;
 width: 100%;
-background: linear-gradient(45deg ,  #854e74 ,#f2c8ce );
+background: linear-gradient(89deg ,  #854e74 ,#f2c8ce );
 
 }
 
@@ -105,7 +105,7 @@ background: linear-gradient(45deg ,  #854e74 ,#f2c8ce );
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vh;
+  width: 700px;
   background: transparent;
 
 }

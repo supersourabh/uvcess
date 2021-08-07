@@ -21,7 +21,7 @@ export default function MainScreenTags() {
     return (
         <div className="tags" style={{width: 768 ,height:500}}>
 
-            <b style={ welcome }>WelCome to</b>
+            <b style={ welcome }>Welcome to</b>
             <strong style={ brand } onClick={ (e) => window.open("https://uvce.ac.in") }>UVCE</strong>
             <b style={ ss }>Study-Support</b>
 

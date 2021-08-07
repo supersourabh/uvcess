@@ -11,7 +11,7 @@ const getToken = (user) => {
         isAdmin: user.isAdmin,
         cr: user.cr
     }, config.JWT_SECRET, {
-        expiresIn: '365d'
+        expiresIn: '10d'
     })
 }
 

@@ -24,7 +24,7 @@ const isAuth = (req, res, next) => {
             config.JWT_SECRET,
             (error, decode) => {
                 if (error) {
-                    res.status(401).send({ message: "Unauthorized" })
+                    res.status(401).send({ message: "Unauthorized , please LOGIN again" })
                 }
                 else {
                     res.user = decode;

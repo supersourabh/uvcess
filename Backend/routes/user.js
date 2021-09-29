@@ -13,16 +13,30 @@ userRouter.post("/signup", async (req, res) => {
     const branch = req.body.branch
     const contact = req.body.contact
     const sem = req.body.sem
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64180361c39d66a894c861187656c61b530b2d01
 
 
     try {
         const student = new Student({
+<<<<<<< HEAD
             name: name,
             rollNo: rollNo,
             branch: branch,
             cr: cr,
             sem: sem,
             contact: contact && contact,
+=======
+            name : name,
+            rollNo : rollNo,
+            branch : branch,
+            cr : cr,
+            sem:sem,
+            contact:contact&&contact,
+           
+>>>>>>> 64180361c39d66a894c861187656c61b530b2d01
         })
 
         const newUser = await student.save()
